@@ -1,5 +1,9 @@
-using my.bookshop as my from '../db/data-model';
+using staffing from '../db/schema';
 
-service CatalogService {
-    @readonly entity Books as projection on my.Books;
+service StaffingService {
+    @readonly
+    entity Opportunities    as projection on staffing.Opportunities;
+
+    @readonly
+    entity BusinessPartners as projection on staffing.BusinessPartners;
 }
