@@ -4,6 +4,12 @@ version: 3.0.0
 description: "Sttafing application"
 parameters:
   enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install @sap/cds
+        - npx cds build
 modules:
   - name: staffing-srv
     type: nodejs
