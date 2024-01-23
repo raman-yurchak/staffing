@@ -8,6 +8,7 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
+        - npm install @sap/cds
         - npx cds build
 modules:
   - name: staffing-srv
